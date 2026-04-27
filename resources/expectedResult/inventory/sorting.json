@@ -1,0 +1,6 @@
+{
+  "totalItems": 6,
+  "firstItemByNameAsc": "Sauce Labs Backpack",
+  "firstItemByPriceAsc": "Sauce Labs Onesie",
+  "accessWithoutLoginError": "You can only access '/inventory.html' when you are logged in"
+}

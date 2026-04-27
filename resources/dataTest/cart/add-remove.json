@@ -1,0 +1,10 @@
+{
+  "addIndexes": {
+    "single": [0],
+    "multiple": [0, 1, 2]
+  },
+  "expectedBadges": {
+    "single": "1",
+    "multiple": "3"
+  }
+}

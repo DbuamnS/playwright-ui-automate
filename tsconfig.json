@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "node16",
+    "moduleResolution": "node16",
+    "lib": ["ES2022", "DOM"],
+    "types": ["node"],
+    "strict": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@index": ["./index.ts"],
+      "@plugins/*": ["./src/plugins/*"],
+      "@fixtures/*": ["./src/fixtures/*"],
+      "@models/*": ["./src/models/*"],
+      "@pageObjects/*": ["./src/pageObjects/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@constants/*": ["./src/constants/*"]
+    }
+  },
+  "include": ["index.ts", "src/**/*.ts", "testCases/**/*.ts", "playwright.config.ts"]
+}

@@ -1,0 +1,38 @@
+{
+  "name": "playwright-ui-automation-template",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Reusable Playwright + TypeScript UI automation template",
+  "scripts": {
+    "test": "playwright test",
+    "test:local": "ENV_NAME=local playwright test",
+    "test:stg": "ENV_NAME=stg playwright test",
+    "test:prod": "ENV_NAME=prod playwright test",
+    "test:ui": "playwright test --ui",
+    "test:headed": "playwright test --headed",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:smoke:stg": "ENV_NAME=stg playwright test --grep @smoke",
+    "test:smoke:prod": "ENV_NAME=prod playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "test:regression:stg": "ENV_NAME=stg playwright test --grep @regression",
+    "test:regression:prod": "ENV_NAME=prod playwright test --grep @regression",
+    "test:critical": "playwright test --grep @critical",
+    "test:high": "playwright test --grep @high",
+    "format": "biome format --write .",
+    "lint": "biome lint .",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.2",
+    "@playwright/test": "^1.55.0",
+    "@types/node": "^24.3.0",
+    "@types/pg": "^8.20.0",
+    "typescript": "^5.8.0"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.100.0",
+    "dotenv": "^17.3.1",
+    "pg": "^8.20.0"
+  }
+}
