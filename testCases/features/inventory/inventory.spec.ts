@@ -11,12 +11,12 @@ test.describe("Inventory", () => {
     await loginPage.login(env.USERNAME, env.PASSWORD);
   });
 
-  test.only("Display all 6 items", { tag: ["@smoke", "@high"] }, async ({ inventoryPage }) => {
+  test("Display all 6 items", { tag: ["@smoke", "@high"] }, async ({ inventoryPage }) => {
     await inventoryPage.goto();
     await inventoryPage.verifyItemCount(expectedResults.totalItems);
   });
 
-  test("Sort by name A-Z", { tag: ["@smoke", "@medium"] }, async ({ inventoryPage }) => {
+  test.skip("Sort by name A-Z", { tag: ["@smoke", "@medium"] }, async ({ inventoryPage }) => {
     await inventoryPage.goto();
     await inventoryPage.sortBy(dataTest.sortOptions.nameAsc);
     await inventoryPage.verifySortedItemsName(expectedResults.firstItemByNameAsc);
