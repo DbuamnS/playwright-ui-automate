@@ -11,7 +11,7 @@ test.describe("Inventory", () => {
     await loginPage.login(env.USERNAME, env.PASSWORD);
   });
 
-  test.only("Display all 6 items", { tag: ["@smoke", "@high"] }, async ({ inventoryPage }) => {
+  test("Display all 6 items", { tag: ["@smoke", "@high"] }, async ({ inventoryPage }) => {
     await inventoryPage.goto();
     await inventoryPage.verifyItemCount(expectedResults.totalItems);
   });
