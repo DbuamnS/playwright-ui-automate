@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+
+# Playwright
+playwright-report/
+test-results/
+blob-report/
+
+# Root-level secrets (this repo loads env from configs/ — see docs/ENVIRONMENT_GUIDE.md)
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# TypeScript build artifacts
+dist/
+*.tsbuildinfo
+
+# Test coverage (if enabled later)
+coverage/
+
+# IDE
+.idea/
