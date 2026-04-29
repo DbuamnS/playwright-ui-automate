@@ -28,7 +28,7 @@ test.describe("Inventory", () => {
     await inventoryPage.verifySortedItemsName(expectedResults.firstItemByPriceAsc);
   });
 
-  test("Cannot access without login", { tag: ["@smoke", "@high"] }, async ({ inventoryPage }) => {
+  test.only("Cannot access without login", { tag: ["@smoke", "@high"] }, async ({ inventoryPage }) => {
     await inventoryPage.clearCookies();
     await inventoryPage.goto();
     await inventoryPage.verifyURL(env.BASE_URL);
