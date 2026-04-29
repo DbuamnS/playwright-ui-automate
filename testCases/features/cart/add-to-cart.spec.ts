@@ -12,7 +12,7 @@ test.describe("Add to cart", () => {
     await loginPage.login(env.USERNAME, env.PASSWORD);
   });
 
-  test("Add single item", { tag: ["@regression", "@high"] }, async ({ inventoryPage, topNav, cartPage }) => {
+  test.only("Add single item", { tag: ["@regression", "@high"] }, async ({ inventoryPage, topNav, cartPage }) => {
     await inventoryPage.addItemToCartByIndex(cartData.addIndexes.single[0]);
 
     await topNav.verifyCartBadge(cartData.expectedBadges.single);
