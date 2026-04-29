@@ -22,7 +22,7 @@ test.describe("Inventory", () => {
     await inventoryPage.verifySortedItemsName(expectedResults.firstItemByNameAsc);
   });
 
-  test("Sort by price low to high", { tag: ["@smoke", "@medium"] }, async ({ inventoryPage }) => {
+  test.only("Sort by price low to high", { tag: ["@smoke", "@medium"] }, async ({ inventoryPage }) => {
     await inventoryPage.goto();
     await inventoryPage.sortBy(dataTest.sortOptions.priceAsc);
     await inventoryPage.verifySortedItemsName(expectedResults.firstItemByPriceAsc);
