@@ -17,5 +17,6 @@ test.describe('Checkout', () => {
     test.skip('Verify user can checkout when input checkout valid info correctly', {tag: ["@Regression", "@Smoke", "@High", "@Test"]}, async ({ checkoutPage}) => {
         await checkoutPage.fillAllCheckoutInfoAndContinue(checkoutInfo.firstName,checkoutInfo.lastName,checkoutInfo.postalCode)
         await checkoutPage.verifyCheckoutStepTwoPage()
+        //ตรงนี้ของฉัน
     })
 })
