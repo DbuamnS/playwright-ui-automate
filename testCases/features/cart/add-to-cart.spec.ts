@@ -20,7 +20,7 @@ test.describe("Add to cart", () => {
     await cartPage.verifyCartItemCount(cartExpected.itemCounts.single);
   });
 
-  test("Add multiple items", { tag: ["@regression", "@high"] }, async ({ inventoryPage, topNav, cartPage }) => {
+  test.only("Add multiple items", { tag: ["@regression", "@high"] }, async ({ inventoryPage, topNav, cartPage }) => {
     for (const index of cartData.addIndexes.multiple) {
       await inventoryPage.addItemToCartByIndex(index);
     }
