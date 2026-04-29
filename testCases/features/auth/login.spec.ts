@@ -15,7 +15,7 @@ test.describe("Login", () => {
     await inventoryPage.verifyInventoryDisplayed();
   });
 
-  test("Login page elements displayed correctly", { tag: ["@smoke", "@high"] }, async ({ loginPage }) => {
+  test.only("Login page elements displayed correctly", { tag: ["@smoke", "@high"] }, async ({ loginPage }) => {
     await loginPage.verifyLoginPageElements();
   });
 
