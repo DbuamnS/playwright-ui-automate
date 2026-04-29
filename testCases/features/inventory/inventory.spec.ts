@@ -16,7 +16,7 @@ test.describe("Inventory", () => {
     await inventoryPage.verifyItemCount(expectedResults.totalItems);
   });
 
-  test("Sort by name A-Z", { tag: ["@smoke", "@medium"] }, async ({ inventoryPage }) => {
+  test.only("Sort by name A-Z", { tag: ["@smoke", "@medium"] }, async ({ inventoryPage }) => {
     await inventoryPage.goto();
     await inventoryPage.sortBy(dataTest.sortOptions.nameAsc);
     await inventoryPage.verifySortedItemsName(expectedResults.firstItemByNameAsc);
