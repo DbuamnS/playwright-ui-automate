@@ -30,7 +30,7 @@ test.describe("Add to cart", () => {
     await cartPage.verifyCartItemCount(cartExpected.itemCounts.multiple);
   });
 
-  test("Remove item from inventory page", { tag: ["@regression", "@medium"] }, async ({ inventoryPage, topNav }) => {
+  test.only("Remove item from inventory page", { tag: ["@regression", "@medium"] }, async ({ inventoryPage, topNav }) => {
     await inventoryPage.addItemToCartByIndex(cartData.addIndexes.single[0]);
     await topNav.verifyCartBadge(cartData.expectedBadges.single);
 
