@@ -10,12 +10,13 @@ test.describe("Login", () => {
   const loginData = resource.readJson("resources/dataTest/auth/login.json") as any;
   const loginExpected = resource.readJson("resources/expectedResult/auth/login.json") as any;
 
-  test("Login with valid credentials", { tag: ["@smoke", "@critical"] }, async ({ loginPage, inventoryPage }) => {
+  //test commit and push branch
+  test.only("Login with valid credentials", { tag: ["@smoke", "@critical"] }, async ({ loginPage, inventoryPage }) => {
     await loginPage.login(env.USERNAME, env.PASSWORD);
     await inventoryPage.verifyInventoryDisplayed();
   });
 
-  test.only("Login page elements displayed correctly", { tag: ["@smoke", "@high"] }, async ({ loginPage }) => {
+  test("Login page elements displayed correctly", { tag: ["@smoke", "@high"] }, async ({ loginPage }) => {
     await loginPage.verifyLoginPageElements();
   });
 
