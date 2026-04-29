@@ -44,7 +44,7 @@ test.describe("Add to cart", () => {
     await topNav.verifyCartBadgeHidden();
   });
 
-  test("Continue shopping navigates back to inventory", { tag: ["@regression", "@low"] }, async ({ cartPage }) => {
+  test.only("Continue shopping navigates back to inventory", { tag: ["@regression", "@low"] }, async ({ cartPage }) => {
     await cartPage.goto();
     await cartPage.clickContinueShopping();
     await cartPage.verifyURL(ROUTES.INVENTORY);
