@@ -38,7 +38,7 @@ test.describe("Add to cart", () => {
     await topNav.verifyCartBadgeHidden();
   });
 
-  test("Cart is empty by default", { tag: ["@regression", "@medium"] }, async ({ topNav, cartPage }) => {
+  test.only("Cart is empty by default", { tag: ["@regression", "@medium"] }, async ({ topNav, cartPage }) => {
     await cartPage.goto();
     await cartPage.verifyCartItemCount(cartExpected.itemCounts.empty);
     await topNav.verifyCartBadgeHidden();
